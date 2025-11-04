@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.533);
+}
+#page{
+    width: 800px;
+    background-color: black;
+    color: white;
+}
+
+header{ 
+    .logo{
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 4px solid rgb(0, 72, 255);
+        img{
+            width: 100px;
+        }
+    }
+    .portada{
+        img{
+            width: 100%;
+        }
+    }
+    .buttons-panel{
+        display: flex;
+        justify-content: center;
+        gap:10px;
+        padding: 10px;
+        button{
+            color: white;
+            width: 50%;
+            padding: 15px 0;
+            font-weight: bold;
+            border:0;
+            border-radius: 5px;
+            background-color: rgb(7, 146, 215);
+        }
+    }
+}
+main {
+    padding: 5px;
+    p.bienvenida{
+        color:azure;
+        text-align: center;
+    }
+    .container-films{
+        padding-top: 10px;
+        h2{
+            font-size: 24px;
+            color: rgb(24, 104, 216);
+            padding: 10px 0;
+        }
+        p{
+            color: white;
+        }
+        .grid-films{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+            article{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+    .info-publi{
+        background: #ccc url("./img/watch.jpg") top left no-repeat;
+        background-size: cover;
+        text-align: center;
+        padding: 100px 0 100px 55%;        
+        color: rgb(61, 61, 61);
+        font-size: 24px;
+        font-weight: bolder;
+    }
+    
+}

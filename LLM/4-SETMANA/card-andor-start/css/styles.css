@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+*{
+    box-sizing: border-box;
+  
+}
+
+body{
+    background-color: black;
+}
+img{
+    width: 450px;
+    height: 450px;
+    
+    box-shadow: 10px 0px 100px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.card{
+    display: flex;
+    position: relative;
+    transition: transform 0.2s ease-in-out;
+    border: 5px solid rgb(255, 255, 255);
+    -webkit-box-shadow: inset -1px 3px 8px 5px #c0c3c7, 2px 5px 16px 0px #9ca0a3, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: inset -1px 3px 8px 5px #868789, 2px 5px 16px 0px #777a7e, 5px 5px 15px 5px rgba(0,0,0,0);
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    width: 500px;
+    background-color: rgb(24, 23, 23);
+    height: 550px;
+    margin-top:20px;
+}
+.card:hover{
+    transform: scale(1.05);
+    .top{
+        background-color: red;
+    }
+    .title{
+        color: white;
+        text-shadow: 0 0 10px #ff0000;
+    }
+}
+p{
+    color: rgb(223, 223, 223);
+    /*font-family: 'Permanent Marker', cursive;*/
+    font-size: 1.5rem;
+    text-align: start;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+    text-shadow: 0 0 10px #b8b6b6;
+}
+.title{
+   
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3rem;
+    position: absolute;
+    z-index: 10;
+    margin-top: 15rem;
+    color: transparent;
+    transition: color 1s ease, text-shadow 2s ease;
+    text-shadow: 0 0 0 transparent;
+}
+
+button{
+    background-color:rgb(107, 8, 8); border-radius: 10px; padding: 10px 20px; border: none; cursor: pointer;
+    margin-bottom: 40px; 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    transition: background-color 1s ease, transform 0.2s ease-in-out;
+    -webkit-box-shadow: inset -1px 3px 8px 5px #ff0000, 2px 5px 16px 0px #ff0000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: inset -1px 3px 8px 5px #ff1f1f, 2px 5px 16px 0px #d31313, 5px 5px 15px 5px rgba(0,0,0,0);
+    .fa-video{
+        margin-right: 7px;
+    }
+   
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 10rem;
+}
+button:hover{
+    background-color: rgb(228, 16, 16);
+    transform: scale(1.1);
+}
+.top{
+    background-color: rgb(173, 19, 19);
+    position: absolute;
+    z-index: 100;
+    width: 50px;
+    height: 80px;
+    transition: background-color 1s ease;
+    clip-path: polygon(100% 0, 100% 100%, 50% 70%, 0 100%, 0 0);
+    top: 10px;
+    right: 35px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight:bolder;
+    -webkit-box-shadow: inset -1px 3px 8px 5px #ff0000, 2px 5px 16px 0px #ff0000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: inset -1px 3px 8px 5px #ff1f1f, 2px 5px 16px 0px #d31313, 5px 5px 15px 5px rgba(0,0,0,0);
+   
+}

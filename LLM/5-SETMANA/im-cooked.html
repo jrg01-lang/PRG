@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --fondo1:white;
+            --fondo2:rgb(204, 201, 201);
+            --tipografia-principal:Arial;
+        }
+        *{
+         box-sizing: border-box;
+        }
+        header,main,aside,article,section,footer{
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header, footer{
+            height: 10vh;
+        }
+        main{
+            margin: 1rem 0;
+            padding: 1rem;
+
+            display: flex;
+            gap: 1rem;
+            min-height: 60vh;
+        }
+        aside{
+            flex-basis: 20%;
+            min-height: 20vh;
+        }
+        .film-container{
+            flex-basis:60%;
+            min-height: 60vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 20vh 20vh 20vh;
+            gap:10px;
+        }
+        article{
+            width: 100%;
+            height: 100%;
+            background-color: var(--fondo2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        HEADER
+    </header>
+    
+    <main>
+        <aside>Column 1</aside>
+        <section class="film-container">
+            <article>F1</article>
+            <article>F2</article>
+            <article>F3</article>
+            <article>F4</article>
+            <article>F5</article>
+            <article>F6</article>
+            <article>F7</article>
+            <article>F8</article>
+            <article>F9</article>
+            
+        </section>
+        <aside>Column 2</aside>
+    </main>
+
+    <footer>
+        FOOTER
+    </footer>
+</body>
+</html>

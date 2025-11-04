@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2::before{
+            content: "😁";
+        }
+        h2::after{
+            content: "😁";
+        }
+        .card{
+            width: 250px;
+            height: 350px;
+            border: 1px solid black;
+            padding: 10px;
+            position:relative;
+        }
+        .card::before{
+            content: "💖";
+            width: 80px;
+            height: 30px;
+            border: 1px solid black;
+            text-align: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position:absolute;
+            top: 5px;
+            right: 30px;
+        }
+        .card .btn{
+            padding: 10px 15px 15px 30px;
+            background-color: blue;
+            border: 0px;
+            color: white;
+            font:bolder 15px Arial;
+            position: relative;
+           
+        }/*me stpoydorumdaiendomjoderrerwer*/
+        .card .btn::before{
+            content: ">";
+            width: 30px; 
+            height: 40px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.4s;
+
+            position: absolute;
+            top: 0;
+            left: -50px;
+        }
+        .card .btn:hover::before{
+            transition: all 0.4s;
+            left: 5px;
+
+        }
+        ul li{
+            list-style: none;
+            background-color: rgb(160, 159, 159);
+            border-bottom: 1px solid black;
+            width: 150px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Titulo</h2>
+
+
+    <article class="card">
+        <h3>Ordenador</h3>
+        <p>Procesador intel....</p>
+        <button class="btn">Comprar</button>
+    </article>
+
+    <nav>
+        <div><a href="">Inicio</a></div>
+        <div><a href="">Contacto</a></div>
+        <div>
+            <details>
+                <summary>Novedades</summary>
+                <ul>
+                    <li>Mes de julio</li>
+                    <li>Mes de agosto</li>
+                    <li>Mes de septiembre</li>
+                </ul>
+            </details>
+    </nav>
+
+</body>
+</html>

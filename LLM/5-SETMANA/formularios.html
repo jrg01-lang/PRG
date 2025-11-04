@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="ruta de envio de datos" method="POST">
+        <fieldset>
+            <legend>DATOS DE USUARIO</legend>
+            <div>
+                <label>NIF:</label>
+                <input type="text" name="nif" id="nif" placeholder="TU PUTO NIF AQUI" maxlength="12">  
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" name="cliente" id="">Cliente premium <br>
+                <input type="checkbox" name="targeta-club" id="">Tarjeta club <br>
+            </div>
+            <br>
+           <div>
+            <label>Tipo de envio:</label>
+            <input type="radio" name="envio-casa" value="D">Envío a domicilio
+            <input type="radio" name="envio-casa" value="R">Recogida en tienda
+           </div>
+           <br>
+           <div>
+            <label for="">Idioma</label>
+            <select name="idioma">
+                <option value="es">Castellano</option>
+                <option value="ca">Catalán</option>
+                <option value="en">Inglés</option>
+            </select>
+           </div>
+           <div>
+            <label for="">observiaciones:</label><br>
+            <textarea name="observaciones" cols="30" rows="10" placeholder="TUS OBSERVACIONES AQUI PUTO"></textarea>
+           </div>
+           <div>
+                <input type="button" value="Enviar">
+                <input type="submit" value="Enviar datos tipo submit">
+                <input type="reset" value="borrar datos">
+           </div>
+           <br>
+           <div>
+            <input type="date" name=""  id="">
+            <input type="email" name="" id="" placeholder="mecagoentusmuertos@gmail.com">
+            <input type="number" name="" id="" min="0"max="20" placeholder="LOSER">
+           </div>
+
+           <input list="coches" name="browser"  id="browser" placeholder="esperoquenoleaestoelprofe">
+           <br>
+           <datalist id="coches">
+            <option value="Ford">Ford</option>
+            <option value="Seat">Seat</option>
+           </datalist>
+        </fieldset>
+    </form>
+</body>
+</html>
