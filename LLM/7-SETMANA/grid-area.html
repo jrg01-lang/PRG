@@ -7,15 +7,16 @@
     <style>
         .grid-container{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: auto;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
             height: 95vh;
             gap: 0;
             grid-template-areas: 
-            "Header Header Header"
-            "aside section1 section1"
-            "aside section2 section2"
-            "oferta publicidad1 Registronewsletter";
+            "Header Header Header Header"
+            "bloque1 bloque1 bloque1 aside"
+            "bloque1 bloque1 bloque1 aside"
+            "bloque1 bloque1 bloque1 aside"
+            "Publicidad1 Publicidad1 registro registro";
             .header{
                 grid-area: Header;
             }
@@ -23,19 +24,14 @@
                 grid-area: aside;
             }
             .section1{
-                grid-area: section1;
+                grid-area: bloque1;
             }
-            .section2{
-                grid-area: section2;
-            }
-            .oferta{
-                grid-area: oferta;
-            }
+            
             .publicidad1{
-                grid-area: publicidad1;
+                grid-area: Publicidad1;
             }
             .Registronewsletter{
-                grid-area: Registronewsletter;
+                grid-area: registro;
             }
             section, article, .aside{
                 background-color: beige;
@@ -58,12 +54,6 @@
         </aside>
         <section class="section1">
             section 1
-        </section>
-        <section class="section2">
-            section 2
-        </section>
-        <section class="oferta">
-            oferta
         </section>
         <section class="publicidad1">
             publicidad 1
