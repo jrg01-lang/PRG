@@ -12,26 +12,37 @@
             height: 50vh;
             gap: 0;
             grid-template-areas: 
-            "oferta oferta oferta"
-            "art-1 art-2 art-3";
+            "Header Header Header"
+            "aside section1 section1"
+            "aside section2 section2"
+            "oferta publicidad1 Registronewsletter";
+            .header{
+                grid-area: Header;
+            }
+            .aside{
+                grid-area: aside;
+            }
+            .section1{
+                grid-area: section1;
+            }
+            .section2{
+                grid-area: section2;
+            }
             .oferta{
                 grid-area: oferta;
             }
-            .art-1{
-                grid-area: art-1;
+            .publicidad1{
+                grid-area: publicidad1;
             }
-            .art-2{
-                grid-area: art-2;
+            .Registronewsletter{
+                grid-area: Registronewsletter;
             }
-            .art-3{
-                grid-area: art-3;
-            }
-            section, article{ 
+            section, article, .aside{
                 background-color: beige;
                 border:1px solid black;     
                 display: flex;
                 justify-content: center;
-                align-items: center;               
+                align-items: center;  
             }
         }
     </style>
@@ -39,12 +50,27 @@
 <body>
 
     <div class="grid-container">
-        <section class="oferta">
-            Oferta principal
+        <section class="header">
+            Header
         </section>
-        <article class="art-1">articulo 1</article>
-        <article class="art-2">articulo 2</article>
-        <article class="art-3">articulo 3</article>
+        <aside class="aside">
+            aside
+        </aside>
+        <section class="section1">
+            section 1
+        </section>
+        <section class="section2">
+            section 2
+        </section>
+        <section class="oferta">
+            oferta
+        </section>
+        <section class="publicidad1">
+            publicidad 1
+        </section>
+        <section class="Registronewsletter">
+            Registro newsletter
+        </section>
     </div>
 </body>
 </html>
