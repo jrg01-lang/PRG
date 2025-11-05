@@ -1,5 +1,6 @@
 package prueba.t;
-
+import java.util.Scanner;
+import prueba.t.UtilitatsConsola;
 /**
  * @author joan
  */
@@ -26,20 +27,29 @@ public class UtilitatsArrays {
         for (int i = 0; i < array.length; ++i){
            total += array[i];
         }
-        System.out.println(total);
+        
         return total;
     }
-    public static void mitjanaArray(int[] array) {
+    public static void mitjanaArrays(int[] array) {
         int total = sumaArray(array);
         int totalnum = array.length;
         float mitjana = (float) total / (float) totalnum;
-        System.out.println(mitjana);
+        System.out.println("Mitjana:" + mitjana);
     }
     public static int[] generaArray(int longitud, int minim, int maxim) {
         int[] array = new int[longitud];
         
         for (int i = 0; i < array.length; i++) {
             array[i] = minim + (int) (Math.random() * (maxim - minim + 1));
+        }
+
+        return array;
+    }
+    public static String[] generaArrayAlumnes(int cantidad) {
+        String[] array = new String[cantidad];
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < array.length; i++) {
+            array[i] = UtilitatsConsola.llegirCadena("Escribe el nombre del alumno:");
         }
         System.out.println(array);
         return array;
