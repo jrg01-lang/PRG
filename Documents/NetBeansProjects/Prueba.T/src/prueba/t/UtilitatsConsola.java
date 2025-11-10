@@ -4,6 +4,17 @@ import java.util.Scanner;
 
 public class UtilitatsConsola {
 public static final String ROJO = "\u001B[31m";
+public static final String RESET = "\u001B[0m";
+public static final String VERDE = "\u001B[32m";
+public static final String AMARILLO = "\u001B[33m";
+public static final String AZUL = "\u001B[34m";
+public static final String MORADO = "\u001B[35m";
+public static final String CIAN = "\u001B[36m";
+public static final String BLANCO = "\u001B[37m";
+public static final String FONDO_NEGRO = "\u001B[40m";
+public static final String FONDO_ROJO = "\u001B[41m";
+public static final String FONDO_VERDE = "\u001B[42m";
+public static final String FONDO_AZUL = "\u001B[44m";
     /**
      * Llegeix un sencer del scanner.
      *
@@ -39,26 +50,27 @@ public static final String ROJO = "\u001B[31m";
         return cadena;
     }
     public static void calvera() {
-        System.out.println(ROJO + "\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n\n\n"   + ROJO + "    .oXXXXXXXXXXXXXXXXXXo.\n" +
-"     .oXXXXX/XXXXXXXX\\XXXXXXXo.\n" +
-"    /XXXXXX-\\XXXXXXXX/-XXXXXXXx\\\n" +
-"   dXXXXXX/XX\\XXXXXX/XX\\XXXXXXXXb\n" +
-"  XXXXXXXXXXXX\\XXXX/XXXXXXXXXXXXX\n" +
-"  XXX'~   ~`OO8bXXXd8OO'~  ~`XXXXX\n" +
-"  9XX'        `98v8P'         `XXP'\n" +
-"   9X.        .db|db.         .XP\n" +
-"    )b. .dbo.dP'`v'`9b.odb. .dX(\n" +
-"  ,dXXXXXXXXXXb     dXXXXXXXXXXb.\n" +
-" dXXXXXXXXXXP'   .   `9XXXXXXXXXXb\n" +
-"dXXXXXXXXXXXb   d|b   dXXXXXXXXXXXb\n" +
-"9XXb'  `XXXXXb.dX|Xb.dXXXXX'  `dXXP\n" +
-" `'     9XXXXXX(   )XXXXXXP     `'\n" +
-"         XXXX X.`N'.X XXXX\n" +
-"         XP^X'`O   0'`X^XX\n" +
-"         X. R  `   '  9 )X\n" +
-"         `K  `       '  7'\n" +
-"          `             '\n" +
-"------------------------------------------------\n");
+        System.out.println(ROJO + "\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n\n\n" + FONDO_ROJO + 
+"       .oXXXXXXXXXXXXXXXXXXo.\n" + FONDO_ROJO +
+"     .oXXXXX/XXXXXXXX\\XXXXXXXo.\n" + ROJO + 
+"    /XXXXXX-\\XXXXXXXX/-XXXXXXXx\\\n" + ROJO + 
+"   dXXXXXX/XX\\XXXXXX/XX\\XXXXXXXXb\n" + ROJO + 
+"  XXXXXXXXXXXX\\XXXX/XXXXXXXXXXXXX\n" + ROJO + 
+"  XXX'~   ~`OO8bXXXd8OO'~  ~`XXXXX\n" + ROJO + 
+"  9XX'        `98v8P'         `XXP'\n" + ROJO + 
+"   9X.        .db|db.         .XP\n" + ROJO + 
+"    )b. .dbo.dP'`v'`9b.odb. .dX(\n" + ROJO + 
+"  ,dXXXXXXXXXXb     dXXXXXXXXXXb.\n" + ROJO + 
+" dXXXXXXXXXXP'   .   `9XXXXXXXXXXb\n" + ROJO + 
+"dXXXXXXXXXXXb   d|b   dXXXXXXXXXXXb\n" + ROJO + 
+"9XXb'  `XXXXXb.dX|Xb.dXXXXX'  `dXXP\n" + ROJO + 
+" `'     9XXXXXX(   )XXXXXXP     `'\n" + ROJO + 
+"         XXXX X.`N'.X XXXX\n" + ROJO + 
+"         XP^X'`O   0'`X^XX\n" + ROJO + 
+"         X. R  `   '  9 )X\n" + ROJO + 
+"         `K  `       '  7'\n" + ROJO + 
+"          `             '\n" + ROJO + 
+"------------------------------------------------\n" );
     }
     
     /**
