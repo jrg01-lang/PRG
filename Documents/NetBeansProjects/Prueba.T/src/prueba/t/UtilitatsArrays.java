@@ -51,7 +51,7 @@ public class UtilitatsArrays {
         for (int i = 0; i < array.length; i++) {
             array[i] = UtilitatsConsola.llegirCadena("Escribe el nombre del alumno:");
         }
-        System.out.println(array);
+        
         return array;
     }
     public static boolean comparaArrays(int[] array1, int[] array2) {

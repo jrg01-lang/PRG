@@ -3,7 +3,7 @@ package prueba.t;
 import java.util.Scanner;
 
 public class UtilitatsConsola {
-
+public static final String ROJO = "\u001B[31m";
     /**
      * Llegeix un sencer del scanner.
      *
@@ -37,6 +37,28 @@ public class UtilitatsConsola {
         cadena = scanner.nextLine();
         //scanner.close();
         return cadena;
+    }
+    public static void calvera() {
+        System.out.println(ROJO + "\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n\n\n \n\n\n\n\n\n\n"   + ROJO + "    .oXXXXXXXXXXXXXXXXXXo.\n" +
+"     .oXXXXX/XXXXXXXX\\XXXXXXXo.\n" +
+"    /XXXXXX-\\XXXXXXXX/-XXXXXXXx\\\n" +
+"   dXXXXXX/XX\\XXXXXX/XX\\XXXXXXXXb\n" +
+"  XXXXXXXXXXXX\\XXXX/XXXXXXXXXXXXX\n" +
+"  XXX'~   ~`OO8bXXXd8OO'~  ~`XXXXX\n" +
+"  9XX'        `98v8P'         `XXP'\n" +
+"   9X.        .db|db.         .XP\n" +
+"    )b. .dbo.dP'`v'`9b.odb. .dX(\n" +
+"  ,dXXXXXXXXXXb     dXXXXXXXXXXb.\n" +
+" dXXXXXXXXXXP'   .   `9XXXXXXXXXXb\n" +
+"dXXXXXXXXXXXb   d|b   dXXXXXXXXXXXb\n" +
+"9XXb'  `XXXXXb.dX|Xb.dXXXXX'  `dXXP\n" +
+" `'     9XXXXXX(   )XXXXXXP     `'\n" +
+"         XXXX X.`N'.X XXXX\n" +
+"         XP^X'`O   0'`X^XX\n" +
+"         X. R  `   '  9 )X\n" +
+"         `K  `       '  7'\n" +
+"          `             '\n" +
+"------------------------------------------------\n");
     }
     
     /**
