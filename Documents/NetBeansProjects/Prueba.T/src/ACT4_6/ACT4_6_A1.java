@@ -41,7 +41,8 @@ public class ACT4_6_A1 {
         NFULLES=UtilitatsConsola.llegirSencer("Nombre de fulles: ");
         tauler = new int[NTAULER][NTAULER];  // matriu NTAULERxNTAULER
         boolean condicionCumplida = false;
-        int contador = 3;
+        System.out.println("La ventana ha de estar oberta per registrar els moviments");
+        int contador = 10;
         CucUtils ventana = new CucUtils();
        
         // Bucle que se ejecuta cada 1000 ms
