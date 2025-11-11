@@ -18,7 +18,7 @@ public class PruebaT {
        Scanner scanner = new Scanner(System.in);
        UtilitatsArrays.mostraArray(array);
        UtilitatsArrays.sumaArray(array);
-       UtilitatsArrays.mitjanaArray(array);
+      
        System.out.println(UtilitatsArrays.maximArray(array));
        System.out.println(UtilitatsArrays.minArray(array));
        System.out.println("Introduce valores para generar un array");
