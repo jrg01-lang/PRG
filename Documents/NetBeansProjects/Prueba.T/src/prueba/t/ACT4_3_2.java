@@ -25,14 +25,22 @@ public class ACT4_3_2 {
     public static final String FONDO_ROJO = "\u001B[41m";
     public static final String FONDO_VERDE = "\u001B[42m";
     public static final String FONDO_AZUL = "\u001B[44m";
-    public static void ChangeNames(String[] alumnos) {
+    public static void ChangeNames(String[] alumnos, int[][] notes) {
         System.out.println("");
         for (int i = 0; i < alumnos.length; i++) {
             System.out.print(MORADO);
             System.out.println(i + ". " + alumnos[i]);
+            System.out.print(BLANCO);
         }
         int resposta = UtilitatsConsola.llegirSencer("Select a Option\n");
-        
+        if (resposta >= 0 && resposta < alumnos.length) {
+            alumnos[resposta] = UtilitatsConsola.llegirCadena("Escribe el nombre:");
+            gestionarMenu(alumnos, notes);
+            System.out.println(FONDO_VERDE +"El cambio se ha relaizado con exito" + FONDO_NEGRO);
+        } else{
+            System.out.println(FONDO_ROJO + "Error intruduce un numero valido" + FONDO_NEGRO);
+            ChangeNames(alumnos, notes);
+        }
     }
     public static void gestionarMenu(String[] alumnos, int[][] notes ) {
         UtilitatsConsola.calvera();
@@ -45,9 +53,9 @@ public class ACT4_3_2 {
         if (resposta == 3){
           System.out.println("CLOSING...");
         } else if (resposta == 2) {
-            ChangeNames(alumnos);
+            ChangeNames(alumnos, notes);
         } else if (resposta == 1) {
-            ChangeNames(alumnos);
+            ChangeNames(alumnos, notes);
         }
     }
     
