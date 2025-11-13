@@ -77,8 +77,10 @@ public class ACT4_6_V1 {
         
         //ELIMINO LA POSICION ACTUAL DE CUC
         tauler[cuc[0]][cuc[1]] = SIMBOL_BUIT;
-        int fila = cuc[0]; int columna = cuc[1];
         
+        int fila = cuc[0]; int columna = cuc[1];
+        int lastRow = 0;
+        int lastColumn = 0;
         
         //LOGICA DE CAMIBOS:
         switch (accio){
@@ -111,29 +113,54 @@ public class ACT4_6_V1 {
         
         //APLICAR CAMBIOS:
         if (tauler[cuc[0]][cuc[1]] == SIMBOL_FULLA){
-            boolean añadido = false;
+            
             for (int i = 1; i < coa.length; i++){
-                System.out.println(i);
+                System.out.println("FULLA I NUMBER:" + i + " Valores: " + fila + " " + columna);
                 if (i == 1){
-                        if (coa[i][2] == 1) {break;}
+                      
                         coa[i][0] = fila;
                         coa[i][1] = columna;
                         
                         //DECIMOS QUE EXISTE ESTA COA
-                        coa[i][2] = 1;
-                        añadido = true;
+                        if (coa[i][2] == 0){
+                          coa[i][2] = 1;
+                          break;
+                        }
                     } else{
-                        if (añadido)
-                            break;
+                       
                         coa[i][0] = coa[i - 1][0];
                         coa[i][1] = coa[i - 1][1];
                         //DECIMOS QUE EXISTE ESTA COA
-                        coa[i][2] = 1;
-                        añadido = true;
+                        if (coa[i][2] == 0){
+                            coa[i][2] = 1;
+                            
+                            // Verificamos La siguente Cola para no añadir mas colas
+                            if (coa[i + 1][2] == 0)
+                                break;
+                        }
+                        
+                        
                 }  
             }
-            UtilitatsMatrius.mostrarMatriu(coa);
+            
+        } else if (tauler[cuc[0]][cuc[1]] == SIMBOL_BUIT){
+            
+            for (int i = 1; i < coa.length; i++){
+                System.out.println("BUIT I NUMBER:" + i);
+                if (i == 1){
+                    if (coa[i][2] == 1) {
+                        coa[i][0] = fila;
+                        coa[i][1] = columna; 
+                    }
+                } else if (coa[i][2] == 1) {
+                    coa[i][0] = coa[i - 1][0];
+                    coa[i][1] = coa[i - 1][1];
+                }
+            }
         }
+        lastRow = fila;
+        lastColumn = columna;
+        UtilitatsMatrius.mostrarMatriu(coa);
         tauler[cuc[0]][cuc[1]] = SIMBOL_CUC;
         
     }
