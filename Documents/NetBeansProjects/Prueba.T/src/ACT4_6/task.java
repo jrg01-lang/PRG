@@ -9,7 +9,12 @@ package ACT4_6;
  * @author Julen
  */
 public class task {
-     public static void wait(int milisegundos) {
+    public static final String FONDO_VERDE = "\u001B[42m";
+    public static final String FONDO_NEGRO = "\u001B[40m";
+    public static void clear() {
+        System.out.print("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+    }
+    public static void wait(int milisegundos) {
         try {
             Thread.sleep(milisegundos);
         } catch (InterruptedException e) {

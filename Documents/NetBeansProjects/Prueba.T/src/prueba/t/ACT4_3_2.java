@@ -8,7 +8,7 @@ import java.util.Scanner;
 import prueba.t.UtilitatsMatrius;
 import prueba.t.UtilitatsArrays;
 import prueba.t.UtilitatsConsola;
-
+import ACT4_6.task;
 /**
  *
  * @author Julen
@@ -20,6 +20,7 @@ public class ACT4_3_2 {
     public static final String AZUL = "\u001B[34m";
     public static final String MORADO = "\u001B[35m";
     public static final String CIAN = "\u001B[36m";
+    public static final String RESET = "\u001B[0m";
     public static final String BLANCO = "\u001B[37m";
     public static final String FONDO_NEGRO = "\u001B[40m";
     public static final String FONDO_ROJO = "\u001B[41m";
@@ -27,19 +28,27 @@ public class ACT4_3_2 {
     public static final String FONDO_AZUL = "\u001B[44m";
     public static void ChangeNames(String[] alumnos, int[][] notes) {
         System.out.println("");
-        for (int i = 0; i < alumnos.length; i++) {
+        int contador = 1;
+        for (int i = 0; i < alumnos.length; i++, contador++) {
             System.out.print(MORADO);
-            System.out.println(i + ". " + alumnos[i]);
-            System.out.print(BLANCO);
+            System.out.println(contador + ". " + alumnos[i]);
+            System.out.print(RESET);
         }
+        System.out.println("\n" + FONDO_ROJO + "0. Cancel" + FONDO_NEGRO + "\n");
         int resposta = UtilitatsConsola.llegirSencer("Select a Option\n");
+        resposta--;
         if (resposta >= 0 && resposta < alumnos.length) {
             alumnos[resposta] = UtilitatsConsola.llegirCadena("Escribe el nombre:");
+       
             gestionarMenu(alumnos, notes);
-            System.out.println(FONDO_VERDE +"El cambio se ha relaizado con exito" + FONDO_NEGRO);
+            
         } else{
-            System.out.println(FONDO_ROJO + "Error intruduce un numero valido" + FONDO_NEGRO);
-            ChangeNames(alumnos, notes);
+            if (resposta == 0){
+                gestionarMenu(alumnos, notes);
+            } else {
+                System.out.println(FONDO_ROJO + "Error intruduce un numero valido" + FONDO_NEGRO);
+                ChangeNames(alumnos, notes);
+            }
         }
     }
     public static void gestionarMenu(String[] alumnos, int[][] notes ) {
